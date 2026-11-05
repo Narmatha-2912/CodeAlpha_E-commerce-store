@@ -137,7 +137,5 @@ function displayProducts() {
     }
 
     productList.innerHTML = filtered.map(product => `
-        <article class="product-card">
-            <div class="product-image">
-                <img src="${product.image}" alt="${product.name}" loading="lazy">
-                <span class="product-badge">${product.bad
+    DIL1
+`).join("");}
