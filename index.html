@@ -3,93 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUXE | Discover Your Style</title>
+    <meta name="description" content="LUXE - Discover timeless fashion and premium essentials.">
+    <title>LUXE 2.0 | Premium Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="announcement">
-        ✦ FREE SHIPPING ON ORDERS ABOVE ₹1,999 ✦
+        FREE SHIPPING ON ORDERS ABOVE ₹1999
     </div>
 
     <header class="header">
         <a href="#" class="logo">LUXE<span>.</span></a>
 
-        <nav class="nav-links" id="nav-links">
+        <nav class="nav">
             <a href="#home">Home</a>
-            <a href="#products">Shop</a>
-            <a href="#collections">Collections</a>
+            <a href="#shop">Shop</a>
+            <a href="#categories">Collections</a>
             <a href="#about">About</a>
         </nav>
 
         <div class="header-actions">
-            <button class="icon-btn" id="search-toggle" aria-label="Search">⌕</button>
-            <button class="icon-btn" id="wishlist-toggle" aria-label="Wishlist">♡</button>
-            <button class="cart-btn" id="cart-toggle">
-                Bag (<span id="cart-count">0</span>)
-            </button>
-            <button class="menu-btn" id="menu-toggle" aria-label="Open menu">☰</button>
+            <button id="searchToggle" aria-label="Search">⌕</button>
+            <button id="wishlistToggle" aria-label="Wishlist">♡ <span id="wishCount">0</span></button>
+            <button id="cartToggle" aria-label="Shopping cart">Bag (<span id="cartCount">0</span>)</button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
         </div>
     </header>
 
-    <div class="search-panel" id="search-panel">
-        <input id="search" type="search" placeholder="Search your favourite products...">
+    <div class="search-panel" id="searchPanel">
+        <input type="search" id="searchInput" placeholder="Search your favourite products...">
+        <button id="closeSearch">✕</button>
     </div>
 
     <main>
         <section class="hero" id="home">
             <div class="hero-content">
-                <span class="eyebrow">THE NEW SEASON COLLECTION</span>
-                <h1>Elegance is<br><em>an attitude.</em></h1>
-                <p>Discover thoughtfully selected pieces that make every moment special.</p>
-                <a href="#products" class="primary-btn">EXPLORE COLLECTION <span>→</span></a>
+                <p class="eyebrow">THE NEW SEASON COLLECTION</p>
+                <h1>Style is a way<br>to <em>express.</em></h1>
+                <p class="hero-description">
+                    Discover thoughtfully selected fashion pieces
+                    designed to make every moment timeless.
+                </p>
+                <a href="#shop" class="primary-btn">EXPLORE COLLECTION <span>→</span></a>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200" alt="Fashion collection">
-                <div class="hero-tag">NEW<br>ARRIVALS<br>2026</div>
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1000&auto=format&fit=crop&q=85" alt="Fashion model wearing an elegant outfit">
+                <div class="image-note">NEW SEASON / 2026</div>
             </div>
+            <div class="hero-number">01 — 04</div>
         </section>
 
-        <section class="benefits">
-            <div><span>✧</span><p>Curated Collections</p></div>
-            <div><span>◇</span><p>Premium Quality</p></div>
-            <div><span>↗</span><p>Secure Shopping</p></div>
-            <div><span>♡</span><p>Made for You</p></div>
+        <section class="trust-strip">
+            <div>✧ PREMIUM QUALITY</div>
+            <div>✧ SECURE SHOPPING</div>
+            <div>✧ EASY RETURNS</div>
+            <div>✧ FREE SHIPPING ₹1999+</div>
         </section>
 
-        <section class="shop-section" id="products">
+        <section class="categories section" id="categories">
             <div class="section-heading">
                 <div>
-                    <span class="eyebrow">FIND YOUR FAVOURITE</span>
-                    <h2>Shop the collection</h2>
+                    <p class="eyebrow">CURATED FOR YOU</p>
+                    <h2>Shop by category</h2>
                 </div>
-                <p>Timeless pieces. Modern expressions.</p>
+                <a href="#shop" class="text-link">VIEW ALL →</a>
             </div>
 
-            <div class="shop-tools">
-                <div class="categories" id="categories">
-                    <button class="category active" data-category="All">All</button>
-                    <button class="category" data-category="Bags">Bags</button>
-                    <button class="category" data-category="Watches">Watches</button>
-                    <button class="category" data-category="Shoes">Shoes</button>
-                    <button class="category" data-category="Accessories">Accessories</button>
+            <div class="category-grid">
+                <button class="category-card" data-category="Clothing">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700&auto=format&fit=crop&q=80" alt="Clothing collection">
+                    <span>Clothing <b>→</b></span>
+                </button>
+                <button class="category-card" data-category="Bags">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=700&auto=format&fit=crop&q=80" alt="Bags collection">
+                    <span>Bags <b>→</b></span>
+                </button>
+                <button class="category-card" data-category="Accessories">
+                    <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=700&auto=format&fit=crop&q=80" alt="Accessories collection">
+                    <span>Accessories <b>→</b></span>
+                </button>
+                <button class="category-card" data-category="Shoes">
+                    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=700&auto=format&fit=crop&q=80" alt="Shoes collection">
+                    <span>Shoes <b>→</b></span>
+                </button>
+            </div>
+        </section>
+
+        <section class="shop section" id="shop">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">HANDPICKED FOR YOU</p>
+                    <h2>Our favourites</h2>
+                </div>
+                <span class="product-total" id="productTotal">8 PRODUCTS</span>
+            </div>
+
+            <div class="shop-toolbar">
+                <div class="filter-buttons" id="filterButtons">
+                    <button class="filter-btn active" data-filter="All">All</button>
+                    <button class="filter-btn" data-filter="Clothing">Clothing</button>
+                    <button class="filter-btn" data-filter="Bags">Bags</button>
+                    <button class="filter-btn" data-filter="Accessories">Accessories</button>
+                    <button class="filter-btn" data-filter="Shoes">Shoes</button>
                 </div>
 
-                <select id="sort">
+                <select id="sortSelect" aria-label="Sort products">
                     <option value="default">Sort by: Featured</option>
                     <option value="low">Price: Low to High</option>
                     <option value="high">Price: High to Low</option>
+                    <option value="name">Name: A to Z</option>
                 </select>
             </div>
 
-            <div class="product-grid" id="product-list"></div>
+            <div class="product-grid" id="productGrid"></div>
         </section>
 
-        <section class="editorial" id="collections">
+        <section class="editorial">
+            <div class="editorial-image">
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1000&auto=format&fit=crop&q=85" alt="Elegant fashion editorial">
+            </div>
+            <div class="editorial-content">
+                <p class="eyebrow">LESS BUT BETTER</p>
+                <h2>Elegance never<br>goes out of style.</h2>
+                <p>We believe in timeless designs, thoughtful details and pieces that stay with you beyond seasons.</p>
+                <a href="#shop" class="primary-btn">DISCOVER MORE →</a>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <p class="eyebrow">OUR PHILOSOPHY</p>
+            <h2>Fashion is temporary.<br><em>Style is forever.</em></h2>
+            <p>LUXE is a curated destination for people who appreciate simplicity, quality and individuality.</p>
+        </section>
+
+        <section class="newsletter">
             <div>
-                <span class="eyebrow">A LITTLE MORE LUXE</span>
-                <h2>Style is personal.<br><em>Make it yours.</em></h2>
-                <p>Explore pieces designed to compleme
+                <p class="eyebrow">STAY IN THE LOOP</p>
+                <h2>A little more LUXE<br>in your inbox.</h2>
+                <p>Get updates on new collections and exclusive offers.</p>
+            </div>
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
+                <button type="submit">SUBSCRIBE →</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#" class="logo">LUXE<span>.</span></a>
+        <p>Timeless style. Thoughtfully curated.</p>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+        </div>
+        <p class="copyright">© 2026 LUXE. All rights reserved.</p>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="side-panel" id="cartPanel">
+        <div class="panel-header">
+            <h2>Your Shopping Bag</h2>
+            <button class="close-panel" aria-label="Close cart">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+            <p>Shipping and taxes calculated at checkout.</p>
+            <button id="checkoutBtn" class="checkout-btn">PROCEED TO CHECKOUT →</button>
+        </div>
+    </aside>
+
+    <aside class="side-panel" id="wishlistPanel">
+        <div class="panel-header">
+            <h2>Your Wishlist</h2>
+            <button class="close-panel" aria-label="Close wishlist">✕</button>
+        </div>
+        <div class="cart-items" id="wishlistItems"></div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
